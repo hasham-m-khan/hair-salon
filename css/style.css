@@ -1,0 +1,590 @@
+
+/******************************************
+/* MATERIAL ICONS
+/*******************************************/
+/* @import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+/* @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round"); */
+
+/******************************************
+/* GOOGLE FONTS
+/*******************************************/
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Box Model Hack */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+:root {
+    --base-padding: 3.2rem;
+}
+
+html {
+    /* font: normal 400 62.5% 'Source Sans Pro', sans-serif; */
+    /* font: normal 400 62.5% 'Montserrat', sans-serif; */
+    /* font: normal 400 62.5% 'Roboto', sans-serif; */
+    font: normal 400 62.5% 'Cinzel', serif;
+    /* font: normal 400 62.5% times, serif; */
+}
+
+h1 {
+    font-size: 8.6rem;
+    /* font-size: 7vw; */
+    font-weight: 400;
+    text-transform: uppercase;
+    /* line-height: 10rem; */
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    padding-bottom: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+p {
+    font: normal 400 1.6rem 'Roboto', sans-serif;
+    letter-spacing: .05rem;
+    line-height: 3rem;
+}
+
+a {
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn {
+    padding: 2rem;
+    letter-spacing: 1px;
+}
+.btn span {
+    margin-right: 1rem;
+}
+
+
+.grid-1of2 {
+    width: 50%;
+}
+.grid-1of3 {
+    width: 33.333333333333%;
+}
+
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+
+.pd-x-100 {
+    padding-left: var(--base-padding);
+    padding-right: var(--base-padding);
+}
+.pd-y-100 {
+    padding-top: var(--base-padding);
+    padding-bottom: var(--base-padding);
+}
+.pd-x-200 {
+    padding-left: calc(var(--base-padding) * 2);
+    padding-right: calc(var(--base-padding) * 2);
+}
+.pd-y-200 {
+    padding-top: calc(var(--base-padding) * 2);
+    padding-bottom: calc(var(--base-padding) * 2);
+}
+.pd-x-400 {
+    padding-left: calc(var(--base-padding) * 4);
+    padding-right: calc(var(--base-padding) * 4);
+}
+
+.pd-y-400 {
+    padding-top: calc(var(--base-padding) * 4);
+    padding-bottom: calc(var(--base-padding) * 4);
+}
+.pd-x-600 {
+    padding-left: calc(var(--base-padding) * 6);
+    padding-right: calc(var(--base-padding) * 6);
+}
+.pd-y-600 {
+    padding-top: calc(var(--base-padding) * 6);
+    padding-bottom: calc(var(--base-padding) * 6);
+}
+
+
+.bg-gray {
+    background: rgb(243,244,246);
+}
+.bg-dark {
+    background: rgb(0, 0, 0);
+}
+
+.txt-light {
+    color: white;
+}
+.txt-dark {
+    color: black;
+}
+.txt-medium {
+    color: gray;
+}
+
+/* FOR TESTING PURPOSES */
+.br-red {
+    border: 1px solid red;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+    padding: calc(var(--base-padding) / 2) calc(var(--base-padding) * 2);
+
+}
+    .logo {
+        float: left;
+        font: normal 700 2.6rem 'Great Vibes', cursive;
+        width: 15%;
+    }
+    header nav {
+        float: left;
+        width: 70%;
+        text-align: center;
+    }
+    header > span {
+        vertical-align: middle;
+    }
+    nav > * {
+        display: inline-block;
+        vertical-align: middle;
+        padding: calc(var(--base-padding) / 4) calc(var(--base-padding) / 2);
+    }
+    header > a {
+        text-align: end;
+        float: right;
+        padding: calc(var(--base-padding) / 4) calc(var(--base-padding) / 2);
+        width: 15%;
+    }
+
+/* Aspect ratio for the background image is 4:3 or 3:2 I think */
+main {
+    padding-bottom: 0;
+    background: url("https://cdn.glitch.global/3df1a45d-f9f8-4eaf-a6e0-e8a1ed96d47b/bg-main.jpg?v=1644656615873");
+    background-size: cover;
+}
+
+main.pd-y-400 {
+    padding-bottom: 0;
+    padding-right: 0;
+}
+    .main-left {
+        width: 96%;
+        float: left;
+    }
+        .main-left h1 {
+            padding-top: calc(var(--base-padding) * 3.6);
+        }
+        .main-left h1 span:first-of-type {
+            padding-bottom: 0;
+            line-height: 9rem;
+        }
+        h1 span {
+            display: block;
+        }
+        .main-left p {
+            font: normal 400 2rem 'Cinzel', serif;
+            margin-bottom: 4rem;
+        }
+        .main-left > a {
+            display: inline-block;
+            margin-bottom: 4rem;
+        }
+        .card-01 {
+            display: block;
+            width: 28%;
+            padding-top: 3rem;
+            margin-top: 6.2rem;
+        }
+            .card-01 h4 {
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 200;
+                border-left: 3px solid white;
+                padding: 2rem 3rem;
+            }
+            .card-01 p,
+            .card-01 a {
+                padding: 3rem;
+            }
+            .card-01 p {
+                font-size: 1.6rem;
+                margin: 0;
+            }
+            .card-01 strong {
+                font-weight: 700;
+                font-size: 3.2rem;
+                letter-spacing: 1px;;
+            }
+            .card-01 a {
+                display: inline-block;
+                padding: 1.8rem;
+                margin: 0 0 4rem 3rem;
+            }
+    .main-right {
+        width: 4%;
+        writing-mode: vertical-lr;
+        text-orientation: sideways;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+    }
+
+.sec-2 {
+    padding-top: calc(var(--base-padding) * 4);
+}
+.card-02 {
+    float: left;
+    text-align: center;
+    padding: 2rem;
+}
+    .card-02 img {
+        width: 30%;
+        height: 15%;
+    }
+    .card-02 h4 {
+        /* font-family: georgia, serif; */
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-top: 3rem;
+    }
+    .card-02 p {
+        padding-top: 2rem;
+    }
+
+.sec-3 > section {
+    float: left;
+    position: relative;
+}
+.sec-3 > .grid-1of2:first-of-type {
+    padding-right: var(--base-padding);
+}
+    .sec-3 h2 {
+        font-weight: 500;
+    }
+    .sec-3 h2 span {
+        display: block;
+    }
+    .sec-3 a {
+        display: inline-block;
+        margin-top: 3rem;
+    }
+    .sec-3 img {
+        width: 100%;
+    }
+    .sec-3 i {
+        font-size: 6.4rem;
+        color: rgba(255, 255, 255, .4);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 4;
+    }
+
+    .card-03 {
+        float: left;
+        padding: 3rem;
+    }
+    .card-03 img {
+        width: 100%;
+    }
+    .card-03 section {
+        width: 80%;
+        padding: 1rem var(--base-padding);
+        text-align: center;
+        margin: auto;
+        position: relative;
+        top: -3rem;
+    }
+    .card-03 span {
+        display: block;
+    }
+    .card-03 span:first-of-type {
+        font-size: 1.6rem;
+    }
+
+.sec-5 {
+    background-image: url("https://cdn.glitch.global/3df1a45d-f9f8-4eaf-a6e0-e8a1ed96d47b/flat.jpg?v=1644656616378");
+    background-size: cover;
+}
+.sec-5 h3 {
+    padding-bottom: 6rem;
+}
+
+.sec-6 h2 {
+    display: block;
+    font-weight: 500;
+    text-align: center;
+}
+.sec-6 h2 span {
+    display: block;
+}
+
+.lookbook {
+    height: 90rem;
+    padding: 0;
+}
+.lookbook div {
+    width: 33.3333333333%;
+    height: 100%;
+    float: left;
+}
+.lookbook div img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+.lookbook div:nth-of-type(1) img:first-of-type,
+.lookbook div:nth-of-type(2) img:last-of-type,
+.lookbook div:nth-of-type(3) img:first-of-type {
+    height: 33.3333333333333%;
+}
+.lookbook div:nth-of-type(1) img:last-of-type,
+.lookbook div:nth-of-type(2) img:first-of-type,
+.lookbook div:nth-of-type(3) img:last-of-type {
+    height: 66.666666666666%;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+header nav a span[class*="material"] {
+    font-size: 1rem;
+}
+.menu-button {
+    display: none;
+}
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+
+
+/* TABLETS */
+@media all and (max-width: 832px) {
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    h2 > span,
+    .sec-3 h2 > span {
+        display: inline;
+    }
+
+    main {
+        object-fit: scale-down;
+    }
+
+    header nav,
+    header > a:first-of-type {
+        display: none;
+    }
+
+    .menu-button {
+        display: inline;
+    }
+    .card-01 {
+        width: 55%;
+    }
+
+    .card-02 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+        .card-02 img {
+            width: 15%;
+        }
+
+    .sec-3.w-100 section.grid-1of2 {
+        width: 100%;
+        padding: 0;
+    }
+    .sec-3 a.btn {
+        float: right;
+        margin: 2rem auto 4rem auto;
+    }
+
+    .sec-4 section.grid-1of3 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .card-02 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+        .card-02 img {
+            width: 15%;
+        }
+
+    .sec-6 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .lookbook > *[class*="lookbook"] {
+        width: 100%;
+    }
+
+}
+
+/* MOBILE */
+@media all and (max-width: 512px) {
+
+    h2 {
+        font-size: 2.4rem;
+    }
+    h2 > span {
+        display: inline;
+    }
+
+
+    header nav,
+    header > a:first-of-type {
+        display: none;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .menu-button,
+    .sec-3 h2 span {
+        display: inline;
+    }
+
+    main.pd-x-400,
+    .main-left {
+        padding: 0;
+    }
+    .main-left,
+    .main-right {
+        display: block;
+        width: 100%;
+        padding-left: 1rem;
+    }
+    .main-right {
+        writing-mode: horizontal-tb;
+        position: absolute;
+        top: -2rem;
+    }
+
+    .main-left h1 {
+        font-size: 4rem;
+        padding-top: 8rem;
+    }
+    .main-left h1 span {
+        display: inline;
+    }
+
+    .main-left p {
+        font-size: 1.6rem;
+    }
+    
+    .main-left > a {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+
+    .card-01 {
+        width: 98%;
+    }    
+
+    .sec-2 {
+        padding: 0;
+        margin-top: 3rem;
+    }
+    .card-02 {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+        .card-02 img {
+            width: 15%;
+        }
+
+    .sec-3,
+    .sec-4,
+    .sec-5,
+    .sec-6 {
+        padding: 6rem 1rem;
+    }
+    .sec-3.w-100 section.grid-1of2 {
+        width: 100%;
+        padding: 0;
+    }
+    .sec-3 a.btn {
+        float: right;
+        margin: 2rem auto 4rem auto;
+    }
+
+    .sec-4 section.grid-1of3 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sec-5 h3 {
+        width: 40%;
+        padding-top: 3rem;
+    }
+
+    .lookbook > *[class*="lookbook"] {
+        width: 100%;
+    }
+
+}
